@@ -1,0 +1,15 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "susy";
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+//http://gridcalculator.dk/#/640/6/20/20
+
+$total-columns  : 6;
+$column-width   : 41px;
+$gutter-width   : 10px;
+$grid-padding   : $gutter-width;
+
+$show-grid-backgrounds  : true;
