@@ -20,11 +20,11 @@ namespace Erlend.Net.Blog.Core.Tests.Integration
             post.CreatedDate = DateTime.Now;
             post.Published = false;
 
-            subjectUnderTest.AddPost(post);
+            var createdPost = subjectUnderTest.AddPost(post);
 
-            var posts = subjectUnderTest.GetAllPosts();
-            Assert.True(posts.Count > 0);
-
+            createdPost.Title = "Lol";
+            var updatedPost = subjectUnderTest.UpdatePost(post);
+            Assert.AreEqual(createdPost.Title, updatedPost.Title);
         }
     }
 }

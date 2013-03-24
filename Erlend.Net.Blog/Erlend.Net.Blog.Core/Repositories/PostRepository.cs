@@ -9,15 +9,15 @@ namespace Erlend.Net.Blog.Core.Repositories
 {
     public class PostRepository : IPostRepository
     {
-        public List<Post> GetAllPosts()
+        public List<Post> GetAllPosts(bool published)
         {
             using (var context = new BlogContext())
             {
-                return context.Posts.ToList();
+                return context.Posts.Where(x => x.Published == published).ToList();
             }
         }
 
-        public List<Post> FilterPosts(DateTime from, DateTime to)
+        public List<Post> FilterPosts(DateTime from, DateTime to, bool published)
         {
             using (var context = new BlogContext())
             {
@@ -55,7 +55,7 @@ namespace Erlend.Net.Blog.Core.Repositories
             }
         }
 
-        public Post DeletePost(int id)
+        public void DeletePost(int id)
         {
             using (var context = new BlogContext())
             {
