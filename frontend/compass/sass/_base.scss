@@ -5,11 +5,12 @@
 
 // ---------------------------------------------------------------------------
 // Basic Grid
-//http://gridcalculator.dk/#/640/6/20/20
+// http://gridcalculator.dk/#/320/6/12/10
 
 $total-columns  : 6;
-$column-width   : 41px;
-$gutter-width   : 10px;
-$grid-padding   : $gutter-width;
+$column-width   : 40px;
+$gutter-width   : 12px;
+$grid-padding   : 10px;
 
-$show-grid-backgrounds  : true;
+$show-grid-backgrounds  : false;
+$container-style: magic;
