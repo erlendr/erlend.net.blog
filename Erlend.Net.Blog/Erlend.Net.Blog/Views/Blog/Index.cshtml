@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Erlend.Net.Blog.Core.Models.Post>
+@{
+    ViewBag.Title = "Latest posts";
+}
+@foreach (var post in Model)
+{
+    @Html.Partial("_PostPartial", post);
+}
+

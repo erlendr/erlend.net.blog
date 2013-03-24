@@ -1,0 +1,10 @@
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\bin\Debug\Erlend.Net.Blog.Core.dll.config
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\bin\Debug\Erlend.Net.Blog.Core.dll
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\bin\Debug\Erlend.Net.Blog.Core.pdb
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\bin\Debug\EntityFramework.dll
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\bin\Debug\EntityFramework.xml
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\obj\Debug\Erlend.Net.Blog.Core.csprojResolveAssemblyReference.cache
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\obj\Debug\Erlend.Net.Blog.Core.dll
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\obj\Debug\Erlend.Net.Blog.Core.pdb
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\obj\Debug\Erlend.Net.Blog.Core.Migrations.MakePostDateTimesNullable.resources
+C:\git\Erlend.Net.Blog\Erlend.Net.Blog\Erlend.Net.Blog.Core\obj\Debug\Erlend.Net.Blog.Core.csproj.GenerateResource.Cache
