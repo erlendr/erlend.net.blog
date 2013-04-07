@@ -36,6 +36,7 @@
                 <li>@Html.ActionLink("Contact", "Contact", "Blog")</li>
                 <li>Archives</li>
             </ul>
+            @Html.Partial("_LoginPartial")
         </nav>
         <article>
             @RenderBody()
@@ -45,6 +46,13 @@
         <p>&copy; @DateTime.Now.Year - Erlend.net blog</p>
     </footer>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/ckeditor/ckeditor.js")
+    <script type="text/javascript">
+        CKEDITOR.replace('Content');
+        CKEDITOR.editorConfig = function (config) {
+            ignoreEmptyParagraph = true;
+        };
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,7 +1,7 @@
 ﻿@model Erlend.Net.Blog.Core.Models.Post
 <div class="heading-container">
     <a href="#">
-        <a href="@Url.Action("Post", "Blog", new { id = Model.Id } )">
+        <a href="@Url.Action("Post", "Blog", new { id = Model.Id })">
             <h2>@Model.Title</h2>
         </a>
     </a>
@@ -11,9 +11,9 @@
         Erlend Røsjø
 					<br />
         @Model.PublishedDate
-				<p>
+    <p>
     <p class="postinfo">
-        <a href="#">Comments (1)</a>
+        <a href="@Url.Action("Post", "Blog", new { id = Model.Id })#disqus_thread"></a>
     </p>
 </div>
 <div class="post-container">
@@ -30,3 +30,29 @@
             I’m looking forward to the day when this bifurcation, “fonts” and “web fonts,” disappears and we can get back to simply practicing good typography with good typefaces, and worrying less about the medium and the technology. Although it seems like we’ve been anticipating high resolution screens for at least fifteen years, perhaps we are, finally, almost there.	
         </p>*@
 </div>
+@if (ViewBag.SinglePost == true)
+{
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'erlendnet';
+
+        (function () {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+}
+    <script type="text/javascript">
+        var disqus_shortname = 'erlendnet';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>

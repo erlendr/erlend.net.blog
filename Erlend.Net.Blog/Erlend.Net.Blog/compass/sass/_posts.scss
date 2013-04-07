@@ -1,0 +1,31 @@
+.display-label {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+fieldset {
+	margin-bottom: 20px;
+}
+
+legend {
+	font-size: 14px;
+}
+
+.editor-label {
+	font-weight: bold;
+}
+
+th {
+	font-weight: bold;
+}
+
+.post-container {
+	ol, ul {
+		list-style: initial;
+		margin-left: 25px;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+}

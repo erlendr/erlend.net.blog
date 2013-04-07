@@ -2,6 +2,7 @@
 // Imports
 
 @import "base";
+@import "posts";
 @import "compass/reset";
 
 /* -------------------------------------------------------------------------*/
@@ -56,7 +57,7 @@ h1,h2,h3,h4 {
 header, footer { clear: both; }
 
 .container {
-	@include container;
+	@include container($total-columns, $break);
 	@include susy-grid-background;
 
 	div.logo-contianer {
@@ -64,8 +65,7 @@ header, footer { clear: both; }
 	}
 
 	nav {
-		@include span-columns(5 omega, $total-columns);
-		text-align: right;
+		text-align: left;
 
 		ul {
 			padding: 28px 0 0 0;
@@ -82,7 +82,7 @@ header, footer { clear: both; }
 
 		.heading-container {
 			@include span-columns(6 omega, $total-columns);
-
+@I
 			//padding-top: 57px;
 			//padding-bottom: 15px;
 			border-bottom: 1px solid gray;

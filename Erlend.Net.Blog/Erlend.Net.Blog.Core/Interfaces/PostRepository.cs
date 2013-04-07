@@ -7,6 +7,7 @@ namespace Erlend.Net.Blog.Core.Interfaces
     public interface IPostRepository
     {
         List<Post> GetAllPosts(bool published);
+        List<Post> GetAllPosts();
         List<Post> FilterPosts(DateTime from, DateTime to, bool published);
         Post GetPostById(int id);
         Post AddPost(Post post);

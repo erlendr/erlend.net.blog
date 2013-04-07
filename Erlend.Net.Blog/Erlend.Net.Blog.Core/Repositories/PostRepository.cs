@@ -17,6 +17,14 @@ namespace Erlend.Net.Blog.Core.Repositories
             }
         }
 
+        public List<Post> GetAllPosts()
+        {
+            using (var context = new BlogContext())
+            {
+                return context.Posts.ToList();
+            }
+        }
+
         public List<Post> FilterPosts(DateTime from, DateTime to, bool published)
         {
             using (var context = new BlogContext())

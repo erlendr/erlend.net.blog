@@ -17,6 +17,7 @@ namespace Erlend.Net.Blog.Controllers
         {
             var postRepository = new PostRepository();
             var post = postRepository.GetPostById(id);
+            ViewBag.SinglePost = true;
             return View(post);
         }
 
