@@ -1,0 +1,613 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+/* line 21, ../../compass/sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 31, ../../compass/sass/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 40, ../../compass/sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+/* line 49, ../../compass/sass/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 63, ../../compass/sass/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Removes default margin.
+ */
+/* line 73, ../../compass/sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 85, ../../compass/sass/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, ../../compass/sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* line 107, ../../compass/sass/_normalize.scss */
+h1 {
+  font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 115, ../../compass/sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 124, ../../compass/sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 132, ../../compass/sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 140, ../../compass/sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 153, ../../compass/sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 162, ../../compass/sass/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+/* line 172, ../../compass/sass/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 180, ../../compass/sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 189, ../../compass/sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 196, ../../compass/sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 200, ../../compass/sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+/* line 212, ../../compass/sass/_normalize.scss */
+img {
+  border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 220, ../../compass/sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 232, ../../compass/sass/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 244, ../../compass/sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 255, ../../compass/sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 269, ../../compass/sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 281, ../../compass/sass/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 296, ../../compass/sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 306, ../../compass/sass/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+/* line 316, ../../compass/sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 327, ../../compass/sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 340, ../../compass/sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+/* line 349, ../../compass/sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 359, ../../compass/sass/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 372, ../../compass/sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+/* line 10, ../../compass/sass/screen.scss */
+body {
+  margin: 12px 0 0 0;
+}
+
+/* line 14, ../../compass/sass/screen.scss */
+body {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+/* line 18, ../../compass/sass/screen.scss */
+article {
+  max-width: 944px;
+  margin: auto;
+}
+
+/* line 22, ../../compass/sass/screen.scss */
+h1 {
+  font-size: 61px;
+  line-height: 72px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+/* line 28, ../../compass/sass/screen.scss */
+h2 {
+  font-size: 27px;
+  line-height: 48px;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+/* line 34, ../../compass/sass/screen.scss */
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 24px;
+  margin-bottom: 0px;
+}
+
+/* line 40, ../../compass/sass/screen.scss */
+p, ul {
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+/* line 44, ../../compass/sass/screen.scss */
+small, aside {
+  font-size: 8px;
+}
+
+/* line 48, ../../compass/sass/screen.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 52, ../../compass/sass/screen.scss */
+h1, h2, h3, h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* line 56, ../../compass/sass/screen.scss */
+header, footer {
+  clear: both;
+}
+
+/* line 58, ../../compass/sass/screen.scss */
+.container {
+  *zoom: 1;
+  max-width: 300px;
+  _width: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 62, ../../compass/sass/screen.scss */
+.container div.logo-contianer {
+  width: 13.33333%;
+  float: left;
+  margin-right: 4%;
+  display: inline;
+}
+/* line 66, ../../compass/sass/screen.scss */
+.container nav {
+  width: 82.66667%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -12px;
+  display: inline;
+  text-align: right;
+}
+/* line 70, ../../compass/sass/screen.scss */
+.container nav ul {
+  padding: 28px 0 0 0;
+  margin: 0;
+}
+/* line 74, ../../compass/sass/screen.scss */
+.container nav li {
+  margin-left: 2px;
+  text-transform: uppercase;
+}
+/* line 80, ../../compass/sass/screen.scss */
+.container article {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -12px;
+  display: inline;
+}
+/* line 83, ../../compass/sass/screen.scss */
+.container article .heading-container {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -12px;
+  display: inline;
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
+/* line 92, ../../compass/sass/screen.scss */
+.container article .postinfo-container {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -12px;
+  display: inline;
+}
+/* line 95, ../../compass/sass/screen.scss */
+.container article .postinfo-container .postinfo {
+  margin-bottom: 20px;
+}
+/* line 100, ../../compass/sass/screen.scss */
+.container article .post-container {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -12px;
+  display: inline;
+}
+
+/* line 107, ../../compass/sass/screen.scss */
+p, blockquote {
+  font-weight: 500;
+}
+
+/* line 111, ../../compass/sass/screen.scss */
+blockquote {
+  font-style: italic;
+  padding: 10px;
+}
+
+/* line 116, ../../compass/sass/screen.scss */
+p.postinfo {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+/* line 121, ../../compass/sass/screen.scss */
+h1 {
+  font-weight: 700;
+}
+
+/* line 125, ../../compass/sass/screen.scss */
+a {
+  color: red;
+  text-decoration: none;
+  font-weight: 700;
+}
+/* line 130, ../../compass/sass/screen.scss */
+a h1 {
+  color: black;
+}
+
+/* line 135, ../../compass/sass/screen.scss */
+p a:hover {
+  text-decoration: underline;
+}
+
+/* line 139, ../../compass/sass/screen.scss */
+.logo {
+  background: url("../img/elogo.png");
+  background-size: 41px;
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 41px;
+  display: block;
+}
+
+/* line 148, ../../compass/sass/screen.scss */
+nav ul {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* line 153, ../../compass/sass/screen.scss */
+nav ul li {
+  display: inline-block;
+  margin-left: "5px";
+}
+
+/* line 159, ../../compass/sass/screen.scss */
+pre {
+  background: #F6F5EA;
+  border: 1px solid #E0DED6;
+  color: black;
+  font-family: Consolas,"Lucida Console",monospace;
+  font-size: 10px;
+  margin: 1em 0;
+  overflow: auto;
+  padding: 1em;
+}
