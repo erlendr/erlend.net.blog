@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+var config = require('./config');
 var express = require('express');
 var exphbs  = require('express3-handlebars');
 var helpers = require('./views/lib/helpers');
@@ -14,6 +15,10 @@ var archives = require('./routes/archives');
 var post = require('./routes/post');
 var http = require('http');
 var path = require('path');
+
+//Config
+var config = config.init();
+console.log("config: ", JSON.stringify(config));
 
 //Azure stuff
 var azure = require('azure');
@@ -45,6 +50,8 @@ app.use(express.cookieParser('0aa6038a-e92e-4441-84d1-04972126c9c1'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.compress());
+
 
 // development only
 if ('development' == app.get('env')) {
