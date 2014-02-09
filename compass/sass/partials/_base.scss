@@ -1,6 +1,31 @@
 a {
 	color: $link-color;
 	text-decoration: none;
+
+	&:hover {
+		color: $link-active-color;
+	}
 }
 
 /* main nav */
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	ul li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+
+		a.active {
+			color: $link-active-color;
+		}
+	}
+}
+
+/* article */
+article img {
+	width: 100%;
+}

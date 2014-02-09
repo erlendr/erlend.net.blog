@@ -410,8 +410,34 @@ a {
   color: #dd1144;
   text-decoration: none;
 }
+/* line 5, ../../compass/sass/partials/_base.scss */
+a:hover {
+  color: black;
+}
 
 /* main nav */
+/* line 12, ../../compass/sass/partials/_base.scss */
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 17, ../../compass/sass/partials/_base.scss */
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+/* line 22, ../../compass/sass/partials/_base.scss */
+nav ul li a.active {
+  color: black;
+}
+
+/* article */
+/* line 29, ../../compass/sass/partials/_base.scss */
+article img {
+  width: 100%;
+}
+
 /* Fonts */
 /* line 2, ../../compass/sass/partials/_typography.scss */
 body {
@@ -474,6 +500,11 @@ p, ul {
 /* line 51, ../../compass/sass/partials/_typography.scss */
 small, aside {
   font-size: 12px;
+}
+
+/* line 55, ../../compass/sass/partials/_typography.scss */
+nav a {
+  font-size: 16px;
 }
 
 /* line 6, ../../compass/sass/partials/_grid.scss */
