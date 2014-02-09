@@ -1,19 +1,19 @@
 /* Fonts */
 body {
-	font-family:'Frutiger Neue W01 Book';
+	font-family: 'Roboto', sans-serif;
 }
 
 em, .italic {
 	font-style: normal;
-	font-family:'FrutigerNeueW01-BookIt';
+	font-family: 'Roboto', sans-serif;
 }
 
 .bold {
-	font-family:'Frutiger Neue W01 Bd';
+	font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Frutiger Neue W01 Bd';
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Vertical grid */
@@ -52,6 +52,13 @@ small, aside {
     font-size: 12px;
 }
 
+/* nav */
 nav a {
     font-size: 16px;
+}
+
+/* header */
+header h1 {
+    font-size: 35px;
+    margin: 10px 0 20px 0;
 }

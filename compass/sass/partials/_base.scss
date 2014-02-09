@@ -17,12 +17,14 @@ nav {
 	ul li {
 		display: inline-block;
 		margin: 0;
-		padding: 0;
+		padding: 0 3px 0;
 
 		a.active {
 			color: $link-active-color;
 		}
 	}
+
+	border-bottom: 1px solid $border-light-color;
 }
 
 /* article */

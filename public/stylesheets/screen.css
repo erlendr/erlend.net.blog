@@ -416,6 +416,10 @@ a:hover {
 }
 
 /* main nav */
+/* line 11, ../../compass/sass/partials/_base.scss */
+nav {
+  border-bottom: 1px solid #dddddd;
+}
 /* line 12, ../../compass/sass/partials/_base.scss */
 nav ul {
   margin: 0;
@@ -425,7 +429,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 0 3px 0;
 }
 /* line 22, ../../compass/sass/partials/_base.scss */
 nav ul li a.active {
@@ -433,7 +437,7 @@ nav ul li a.active {
 }
 
 /* article */
-/* line 29, ../../compass/sass/partials/_base.scss */
+/* line 31, ../../compass/sass/partials/_base.scss */
 article img {
   width: 100%;
 }
@@ -441,23 +445,23 @@ article img {
 /* Fonts */
 /* line 2, ../../compass/sass/partials/_typography.scss */
 body {
-  font-family: 'Frutiger Neue W01 Book';
+  font-family: 'Roboto', sans-serif;
 }
 
 /* line 6, ../../compass/sass/partials/_typography.scss */
 em, .italic {
   font-style: normal;
-  font-family: 'FrutigerNeueW01-BookIt';
+  font-family: 'Roboto', sans-serif;
 }
 
 /* line 11, ../../compass/sass/partials/_typography.scss */
 .bold {
-  font-family: 'Frutiger Neue W01 Bd';
+  font-family: 'Roboto', sans-serif;
 }
 
 /* line 15, ../../compass/sass/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Frutiger Neue W01 Bd';
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Vertical grid */
@@ -502,9 +506,17 @@ small, aside {
   font-size: 12px;
 }
 
-/* line 55, ../../compass/sass/partials/_typography.scss */
+/* nav */
+/* line 56, ../../compass/sass/partials/_typography.scss */
 nav a {
   font-size: 16px;
+}
+
+/* header */
+/* line 61, ../../compass/sass/partials/_typography.scss */
+header h1 {
+  font-size: 35px;
+  margin: 10px 0 20px 0;
 }
 
 /* line 6, ../../compass/sass/partials/_grid.scss */
