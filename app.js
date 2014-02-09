@@ -5,6 +5,7 @@
 
 var express = require('express');
 var exphbs  = require('express3-handlebars');
+var helpers = require('./views/lib/helpers');
 var routes = require('./routes');
 var user = require('./routes/user');
 var contact = require('./routes/contact');
@@ -25,6 +26,7 @@ var app = express();
 app.engine('handlebars', 
 	exphbs(
 		{
+			helpers: helpers,
 			defaultLayout: 'main',
 			partialsDir: [
 				'views/partials'
