@@ -18,3 +18,7 @@ node_modules
 
 # Mac crap
 .DS_Store
+
+#SASS
+compass/.sass-cache
+*.scssc
