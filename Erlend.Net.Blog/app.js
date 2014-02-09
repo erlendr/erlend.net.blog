@@ -10,13 +10,27 @@ var user = require('./routes/user');
 var contact = require('./routes/contact');
 var about = require('./routes/about');
 var archives = require('./routes/archives');
+var post = require('./routes/post');
 var http = require('http');
 var path = require('path');
+
+//Azure stuff
+var azure = require('azure');
+var retryOperations = new azure.ExponentialRetryPolicyFilter();
+var tableService = azure.createTableService().withFilter(retryOperations);
 
 var app = express();
 
 // all environments
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', 
+	exphbs(
+		{
+			defaultLayout: 'main',
+			partialsDir: [
+				'views/partials'
+			]
+		}
+));
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
@@ -40,7 +54,31 @@ app.get('/contact', contact.index);
 app.get('/about', about.index);
 app.get('/archives', archives.index);
 app.get('/users', user.list);
+app.get('/post/:id', post.index);
+app.get('/post/:id/:slug', post.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+
+tableService.createTableIfNotExists('posts', function(error){
+	if(!error){
+		console.log('table created!');
+	}
+});
+
+var post = {
+	PartitionKey : 'posts',
+	RowKey : '2',
+	Title : 'Azure still rocks',
+	Slug: 'Sluggy slug',
+	Content: '<p>Hi.</p>',
+	CreatedDate: new Date()
+};
+
+/*tableService.insertEntity('posts', post, function(error){
+	if(!error){
+		console.log('entity inserted');
+	}
+});*/
