@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
- var config = require('./config');
+ var config = require('./config').init();
  var express = require('express');
  var exphbs  = require('express3-handlebars');
  var helpers = require('./views/lib/helpers');
@@ -17,43 +17,41 @@
  var login = require('./routes/login');
  var http = require('http');
  var path = require('path');
- var passport = require('passport')
- , LocalStrategy = require('passport-local').Strategy;
+ var passport = require('passport');
+ var LocalStrategy = require('passport-local').Strategy;
 
 //Passport config
 passport.use(new LocalStrategy(
-	function(username, password, done) {
-		var c = config.init();
-		if (username !== c.adminUsername || password !== c.adminPassword) {
-			return done(null, false, { message: 'Incorrect username or password.' });
-		}
+  function(username, password, done) {
+    if (username !== config.adminUsername || password !== config.adminPassword) {
+      return done(null, false, { message: 'Incorrect username or password.' });
+    }
 
-		return done(null, {id: 0, username: username});
-	}
-	));
+    return done(null, {id: 0, username: username});
+  }
+  ));
 
 passport.serializeUser(function(user, done) {
-	done(null, user.id);
+  done(null, user.id);
 });
 
 passport.deserializeUser(function(id, done) {
-	var c = config.init();
-	done(null, {id: id, username: c.adminUsername})
+  done(null, {id: id, username: config.adminUsername});
 });
 
 var app = express();
 
 // all environments
 app.engine('handlebars', 
-	exphbs(
-	{
-		helpers: helpers,
-		defaultLayout: 'main',
-		partialsDir: [
-		'views/partials'
-		]
-	}
-	));
+  exphbs(
+  {
+    helpers: helpers,
+    defaultLayout: 'main',
+    partialsDir: [
+    'views/partials'
+    ]
+  }
+  ));
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
@@ -73,7 +71,7 @@ app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
-	app.use(express.errorHandler());
+  app.use(express.errorHandler());
 }
 
 app.get('/', routes.index);
@@ -85,15 +83,15 @@ app.get('/post/:id', post.index);
 app.get('/post/:id/:slug', post.index);
 app.get('/login', login.index);
 app.post('/login',
-	passport.authenticate('local', {
-		successRedirect: '/admin',
-		failureRedirect: '/login',
-	}),
-	login.login
-	);
+  passport.authenticate('local', {
+    successRedirect: '/admin',
+    failureRedirect: '/login',
+  }),
+  login.login
+  );
 app.get('/admin', admin.index);
-//app.get('/admin/add', admin.addPost);
+app.get('/admin/add', admin.addPost);
 
 http.createServer(app).listen(app.get('port'), function(){
-	console.log('Express server listening on port ' + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port'));
 });

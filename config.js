@@ -12,6 +12,8 @@ exports.init = function() {
 
 	return {
 		adminUsername : nconf.get('ADMIN_USERNAME'),
-		adminPassword : nconf.get('ADMIN_PASSWORD')
+		adminPassword : nconf.get('ADMIN_PASSWORD'),
+		azureStorageAccount: nconf.get('AZURE_STORAGE_ACCOUNT'),
+		azureStorageAccessKey: nconf.get('AZURE_STORAGE_ACCESS_KEY')
 	};
 };
