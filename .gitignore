@@ -22,3 +22,5 @@ node_modules
 #SASS
 compass/.sass-cache
 *.scssc
+
+env.sh
