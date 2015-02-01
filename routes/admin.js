@@ -8,7 +8,7 @@ exports.index = function(req, res) {
   var result = posts.getAllPosts(function(error, entities) {
     if(!error) {
       res.render(
-        'index',
+        'admin/index',
         {
           layout: 'admin',
           posts: entities
@@ -31,5 +31,5 @@ exports.addPost = function(req, res) {
     res.redirect('/');
   }*/
   
-  res.render('admin/index', { layout: 'admin' });
+  res.render('admin/new', { layout: 'admin' });
 };

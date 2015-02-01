@@ -21,11 +21,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">erlend.net admin</a>
+				<a class="navbar-brand" href="/admin">erlend.net admin</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="/admin">Posts</a></li>
+					<li><a href="/admin">Posts</a></li>
 					<li><a href="/admin/add">New post</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
@@ -33,36 +33,7 @@
 	</div>
 
 	<div class="container">
-		<div class="page-header">
-			<h1>erlend.net admin</h1>
-			<p class="lead">{{error}}</p>
-			{{#if posts}}
-			<table class="table table-striped table-hover">
-				<thead>
-					<tr>
-						<th>Id</th>
-						<th>Title</th>
-						<th>Created date</th>
-						<th>Edit</th>
-					</tr>
-				</thead>
-				<tbody>
-					{{#each posts}}
-					<tr>
-						<td>{{RowKey}}</td>
-						<td>{{Title}}</td>
-						<td>{{CreatedDate}}</td>
-						<td>
-							<a href="#" class="btn btn-primary btn-xs glyphicon glyphicon-edit" role="button">Edit</a>
-						</td>
-					</tr>
-					{{/each}}
-				</tbody>
-			</table>
-			{{else}}
-			<p>No posts :(</p>
-			{{/if}}
-		</div>
+		{{{body}}}
 	</div>
 	<script src="/javascripts/blog.js"/>
 </body>
