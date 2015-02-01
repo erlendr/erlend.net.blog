@@ -65,15 +65,20 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser('0aa6038a-e92e-4441-84d1-04972126c9c1'));
-app.use(bodyParser());
-app.use(session());
+app.use(session({
+  resave: false,
+  secret: '0aa6038a-e92e-4441-84d1-04972126c9c1',
+  saveUninitialized: false,
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(compression());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+  extended: false,
+}));
 app.use(methodOverride());
 
 // development only
