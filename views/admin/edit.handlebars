@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>New post</h1>
+  <h1>Edit post</h1>
   {{#if error}}
     <div class="alert alert-danger" role="alert">
       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -15,11 +15,11 @@
   <form method="POST">
     <div class="form-group">
       <label for="title">Title</label>
-      <input name="title" type="text" class="form-control"></input>
+      <input name="title" type="text" class="form-control" value="{{post.Title}}"></input>
     </div>
     <div class="form-group">
       <label for="content">Content</label>
-      <textarea name="content" class="form-control" rows="20"></textarea>
+      <textarea name="content" class="form-control" rows="20">{{post.Content}}</textarea>
     </div>
     <div class="checkbox">
       <label>

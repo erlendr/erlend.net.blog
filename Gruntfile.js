@@ -2,11 +2,13 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     bower: {
-      install: {
+      dev: {
+        dest: 'public/lib',
         options: {
-          targetDir: './public/lib'
+          expand: true
         }
-      }
+      },
+
     },
     concat: {
       options: {
@@ -17,7 +19,7 @@ module.exports = function(grunt) {
         // the files to concatenate
         src: [
         'public/lib/jquery/jquery.js',
-        'public/lib/bootstrap/bootstrap.js'
+        'public/lib/bootstrap/dist/bootstrap.js'
         ],
         // the location of the resulting JS file
         dest: 'public/javascripts/blog.js'
@@ -51,7 +53,7 @@ module.exports = function(grunt) {
     }
   }); 
 
-  grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-bower');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');

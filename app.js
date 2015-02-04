@@ -82,7 +82,7 @@ app.use(bodyParser.urlencoded({
 app.use(methodOverride());
 
 // development only
-if ('development' == app.get('env')) {
+if (app.get('env') === 'development') {
   app.use(errorhandler());
 }
 
@@ -103,7 +103,9 @@ app.post('/login',
   );
 app.get('/admin', admin.index);
 app.get('/admin/add', admin.addPost);
-app.post('/admin/add', admin.addPost)
+app.post('/admin/add', admin.addPostData);
+app.post('/admin/delete', admin.deletePost);
+app.get('/admin/edit/:id', admin.editPost);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
