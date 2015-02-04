@@ -24,3 +24,5 @@ compass/.sass-cache
 *.scssc
 
 env.sh
+
+public
