@@ -19,8 +19,9 @@ node_modules
 # Mac crap
 .DS_Store
 
-ghost/core/client/assets/css
-ghost/core/built
-ghost/core/client/assets/fonts
-ghost/config.js
-ghost/content/data/ghost-dev.db
+core/client/assets/css
+core/built
+core/client/assets/fonts
+config.js
+content/data/ghost-dev.db
+content/images/**
