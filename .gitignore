@@ -19,10 +19,4 @@ node_modules
 # Mac crap
 .DS_Store
 
-#SASS
-compass/.sass-cache
-*.scssc
-
-env.sh
-
-public
+ghost/content/data/ghost-dev.db
