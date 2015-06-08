@@ -13,18 +13,21 @@
   <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
   <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-  {{ghost_head}}
 
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  {{ghost_head}}
 </head>
 <body class="{{body_class}}">
   {{navigation}}
   <div class="site-wrapper">
     <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
       <h1 class="page-title">{{@blog.title}}</h1>
-      <h2 class="page-description">{{@blog.description}}</h2>
+      <h1 class="page-subtitle">Developer</h1>
+      <h2 class="page-description">Hello. <br/>{{@blog.description}}</h2>
     </header>
     {{{body}}}
-    <footer class="site-footer clearfix">
+    <footer class="site-footer">
       <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
     </footer>
   </div>
